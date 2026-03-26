@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Node X</string>
+
+    <string name="scr_main_lbl_address">MultiAddress</string>
+    <string name="scr_main_lbl_cid">CID</string>
+    <string name="scr_main_lbl_polling_interval">Polling interval</string>
+    <string name="scr_main_lbl_response">Response:</string>
+    <string name="scr_main_lbl_ms">ms</string>
+    <string name="scr_main_lbl_connecting">Connecting…</string>
+    <string name="scr_main_lbl_disconnecting">Disconnecting…</string>
+    <string name="scr_main_lbl_node_unreachable">Node is unreachable. Try later</string>
+    <string name="scr_main_lbl_something_wrong">Something went wrong. Try again, please</string>
+    <string name="scr_main_lbl_wrong_cid">Wrong CID</string>
+</resources>
