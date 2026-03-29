@@ -1,6 +1,5 @@
 package com.example.nodex.ui.main
 
-import android.content.Context
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -77,9 +76,10 @@ class MainViewModel(
 
             is ActionButton -> {
                 if (ipfsService.isConnected()) {
-                    ipfsService.disconnect(clearResult = true)
+                    ipfsService.disconnect()
+                    ipfsService.clear()
                 } else {
-                    ipfsService.connect(action.context)
+                    ipfsService.connect()
                 }
             }
         }
@@ -124,6 +124,7 @@ class MainViewModel(
 
     override fun onCleared() {
         ipfsService.disconnect()
+        ipfsService.clear()
         super.onCleared()
     }
 
@@ -133,7 +134,7 @@ class MainViewModel(
     class OnCIDChanged(val value: String) : Action
     class OnPollingIntervalChanged(val value: String) : Action
 
-    class ActionButton(val context: Context) : Action
+    object ActionButton : Action
 
     @Immutable
     data class MainState(

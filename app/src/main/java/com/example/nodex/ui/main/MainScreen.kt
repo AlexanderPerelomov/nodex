@@ -149,7 +149,7 @@ fun MainScreen(
             {
                 if (!state.isProgress) {
                     focusManager.clearFocus()
-                    viewModel.dispatch(MainViewModel.ActionButton(context))
+                    viewModel.dispatch(MainViewModel.ActionButton)
                 }
             },
             modifier = Modifier

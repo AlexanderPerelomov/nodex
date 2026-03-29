@@ -1,6 +1,5 @@
 package com.example.nodex.domain.service.ipfs
 
-import android.content.Context
 import com.example.nodex.data.ConnectionState
 import kotlinx.coroutines.flow.StateFlow
 
@@ -12,10 +11,12 @@ interface IPFSService {
 
     val connectionFlow : StateFlow<ConnectionState>
 
-    fun connect(context: Context)
+    fun connect()
 
-    fun disconnect(clearResult: Boolean = false)
+    fun disconnect()
 
     fun isConnected(): Boolean
+
+    fun clear()
 
 }
